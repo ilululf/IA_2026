@@ -1,0 +1,65 @@
+{
+  "task": "SRB_vs_NO_SRB",
+  "srb_definition": [
+    "II",
+    "III",
+    "IV"
+  ],
+  "no_srb_definition": [
+    "NO_SRB"
+  ],
+  "dataset_variant": "balanced_model1_srb_vs_no_srb",
+  "positive_class": "SRB",
+  "dataset_root": "/home/igonzalez/ecallisto/dataset_images_balanced_model_1_srb_vs_no_srb",
+  "runs_root": "/home/igonzalez/ecallisto/ecallisto-srb-ai/training_runs",
+  "experiment_name": "pchip_vgg16_model1_srb_vs_no_srb_frozen_w050_050_v2",
+  "mask_column": "mask_path",
+  "image_sizes": [
+    224
+  ],
+  "batch_sizes": [
+    8,
+    16
+  ],
+  "learning_rates": [
+    1e-05,
+    1e-06
+  ],
+  "dense_units": [
+    128,
+    256
+  ],
+  "dropouts": [
+    0.5
+  ],
+  "head_type": "thesis",
+  "threshold": 0.5,
+  "epochs": 150,
+  "patience": 15,
+  "val_size": 0.15,
+  "test_size": 0.15,
+  "steps_multiplier": 1.0,
+  "class_sample_weights_NO_SRB_SRB": [
+    0.5,
+    0.5
+  ],
+  "augment_no_srb": true,
+  "augment_srb": false,
+  "gaussian_noise_std": 3.0,
+  "brightness_delta": 8.0,
+  "contrast_low": 0.9,
+  "contrast_high": 1.1,
+  "translation_width_factor": 0.1,
+  "train_base": false,
+  "unfreeze_last_block": false,
+  "unfreeze_from_block": "none",
+  "max_samples_per_binary_class": null,
+  "seed": 7,
+  "deterministic": false,
+  "mixed_precision": true,
+  "export_predicted_images": false,
+  "n_total": 1852,
+  "n_train": 1296,
+  "n_val": 278,
+  "n_test": 278
+}
